@@ -1,4 +1,4 @@
-import { addTab, addTabInput } from "../ui/clickDOM";
+import { addTab, addTabInput } from "../ui/addItem.js";
 
 function checktab() {
     const form = document.querySelector('.addTabForm');
@@ -6,11 +6,11 @@ function checktab() {
         return addTabInput();
     } else {
         const addTabInput = document.querySelector('.addTabInput');
-        if (addTabInput.value == 0) {
-            form.focus();
+        if (addTabInput.value=="") {
+            addTabInput.focus();
         }
         else {
-            addTab();
+            addTab(true,true);
         }
     }
 }

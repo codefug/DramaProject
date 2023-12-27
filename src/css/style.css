@@ -79,10 +79,6 @@ menu>*{
 menu>*:hover{
     color:var(--subcolor);
 }
-.selected{
-    text-decoration: var(--subcolor) underline;
-    color:white;
-}
 footer{
     position:fixed;
     bottom:0;

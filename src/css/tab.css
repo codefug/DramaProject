@@ -19,3 +19,8 @@ menu p:hover{
 .addTabButton{
     display:none;
 }
+
+.selected{
+    text-decoration: var(--subcolor) underline;
+    color:red;
+}
