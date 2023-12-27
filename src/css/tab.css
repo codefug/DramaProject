@@ -1,0 +1,21 @@
+menu *::selection{
+    background-color: black;
+}
+menu p:hover{
+    cursor: pointer;
+}
+.addTabInput{
+    appearance: none;
+    width:150px;
+    border:0;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 1px groove white;
+    background-color: var(--subcolor);
+    font-family: Myfont;
+    letter-spacing: 0.1rem;
+}
+.addTabButton{
+    display:none;
+}

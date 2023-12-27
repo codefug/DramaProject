@@ -1,0 +1,12 @@
+#content{
+    flex:1;
+    display:grid;
+    grid-template: repeat(auto-fill,360px) / repeat(auto-fill,360px);
+    padding-inline:3vw;
+    gap:3vw;
+}
+
+.contentitem{
+    background-color: white;
+    border-radius: 10px;
+}

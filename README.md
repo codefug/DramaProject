@@ -10,4 +10,3 @@ https://github.com/date-fns/date-fns date time library
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API web storage api
   데이터가 없어도 crash되지 않게 하라
   DevTool을 이용해서 data를 inspect할 수 있다. Application tab>Storage>Local Storage에 있음
-  
