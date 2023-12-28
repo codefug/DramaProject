@@ -2,6 +2,7 @@ import './css/style.css'
 import './css/content.css'
 import './css/tab.css'
 import './css/dialog.css'
+import './css/loading.css'
 
 import logo from './asset/image/symbol/homelogo.png';
 import { checktab } from './function/check';
@@ -11,6 +12,7 @@ import { clearTab } from './ui/removeItem';
 import { makeThatSomething } from './ui/reactionItem';
 import { removeForm } from './ui/removeItem';
 import { maketodo } from './function/item';
+import { loading } from './function/loading'
 
 const Homepage = (function(){
     const h1=document.querySelector('h1');
@@ -18,11 +20,11 @@ const Homepage = (function(){
     const plustab = document.querySelector('#plustab');
     const cleartab = document.querySelector('#clearTab');
     const tabObjectList = getFromStorage("tabList");
-    const todoObjectList = getFromStorage("todoList",true);
     const openFormButton =document.querySelector('#openForm');
     const submitFormButton = document.querySelector('#SubmitForm');
     const cancelFormButton = document.querySelector('#CancelForm');
 
+    loading();
     mylogo.classList.add('homelogo');
     mylogo.src=logo;
     h1.appendChild(mylogo);

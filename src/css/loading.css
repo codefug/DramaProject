@@ -1,0 +1,21 @@
+#loadingbackground{
+    position:fixed;
+    height:100vh;
+    width:100vw;
+    background-image: radial-gradient(rgb(255, 7, 7)1%,rgb(177, 0, 0)30%,black 70%);
+    background-size: 300% 300%;
+    background-position: center;
+    animation: 2s linear 1 load;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes load {
+    100%{
+        background-size:100% 100%;
+        background-image: radial-gradient(rgb(255, 7, 7)0%,rgb(177, 0, 0)0%,black 100%);
+    }
+}
+#loadingbody{
+
+}
