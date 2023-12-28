@@ -4,6 +4,7 @@ import { removeTabInput } from "./removeItem";
 import { removeTab } from "./removeItem";
 import { removeOneItemFromStorage } from "../function/storage";
 import { readImageFile } from "./readImage";
+import { sort } from "./sort";
 
 function addTabInput() {
     const newform = document.createElement('form');
@@ -28,7 +29,6 @@ function addTab(save = false, inputvalue = false) {
     const newdiv = document.createElement('div');
     newdiv.classList.add('tabcomponent');
     const newp2 = document.createElement('p');
-    newdiv.addEventListener('click', (event) => { makeThatSomething(event.target, 'selected', 'tab') });
     newdiv.addEventListener('pointerover', (event) => { makeThatSomething(event.target, 'hovered', 'tab'); });
 
     const newButton = document.createElement('button');
@@ -40,6 +40,7 @@ function addTab(save = false, inputvalue = false) {
     } else {
         value = inputvalue;
     }
+    newdiv.addEventListener('click', (event) => { makeThatSomething(event.target, 'selected', 'tab');sort(value);});
     newButton.classList.add('removeTabButton');
     newButton.addEventListener('click', () => { removeTab(newdiv); removeOneItemFromStorage("tabList", value) });
     newButton.innerHTML = `<span class="material-symbols-outlined minusbutton">remove</span>`;

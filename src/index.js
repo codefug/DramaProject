@@ -10,7 +10,6 @@ import { addTab, addTodoCard, addTodoInput} from './ui/addItem';
 import { clearTab } from './ui/removeItem';
 import { makeThatSomething } from './ui/reactionItem';
 import { removeForm } from './ui/removeItem';
-import { readImageFile } from './ui/readImage';
 import { maketodo } from './function/item';
 
 const Homepage = (function(){
@@ -23,7 +22,7 @@ const Homepage = (function(){
     const openFormButton =document.querySelector('#openForm');
     const submitFormButton = document.querySelector('#SubmitForm');
     const cancelFormButton = document.querySelector('#CancelForm');
-    
+
     mylogo.classList.add('homelogo');
     mylogo.src=logo;
     h1.appendChild(mylogo);
@@ -48,10 +47,7 @@ const Homepage = (function(){
     if (tabObjectList!=null){
         Array.from(tabObjectList).map((value)=>{addTab(false,value);});
     }
-    if (todoObjectList!=null){
-        Array.from(todoObjectList).map((value)=>{addTodoCard(false,value);});
-    }
 
-    submitFormButton.addEventListener('click',(event)=>{event.preventDefault;addTodoCard(true,maketodo())});
+    submitFormButton.addEventListener('click',(event)=>{event.preventDefault;totaltab.click(),addTodoCard(true,maketodo());});
     cancelFormButton.addEventListener('click',(event)=>{event.defaultPrevented;removeForm();});
 })();
