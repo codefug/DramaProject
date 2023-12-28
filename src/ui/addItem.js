@@ -1,6 +1,8 @@
 import { saveToStorage } from "../function/storage";
-import { makeTabSelected } from "./reactionItem";
+import { makeTabSomething } from "./reactionItem";
 import { removeTabInput } from "./removeItem";
+import { removeTab } from "./removeItem";
+import { removeOneItemFromStorage } from "../function/storage";
 
 function addTabInput() {
     const newform = document.createElement('form');
@@ -9,7 +11,7 @@ function addTabInput() {
     const newbutton = document.createElement("button");
     newTabInput.classList.add('addTabInput');
     newbutton.classList.add('addTabButton');
-    newbutton.addEventListener("click", (event) => { event.preventDefault();addTab(true,true); });
+    newbutton.addEventListener("click", (event) => { event.preventDefault(); addTab(true, true); });
     const plustab = document.querySelector('#plustab');
     const menu = document.querySelector('menu');
     newform.appendChild(newTabInput);
@@ -19,26 +21,32 @@ function addTabInput() {
 }
 
 // save = localstorage에 저장여부, inputvalue = input의 정보를 사용하는지 여부
-function addTab(save = false,inputvalue=false) {
+function addTab(save = false, inputvalue = false) {
     const menu = document.querySelector('menu');
     const plustab = document.querySelector('#plustab');
-    const newp = document.createElement('p');
-    newp.classList.add('tab');
-    newp.addEventListener('pointerover',(event)=>{makeTabSelected(event.target)});
+    const newdiv = document.createElement('div');
+    newdiv.classList.add('tabcomponent');
+    const newp2 = document.createElement('p');
+    newdiv.addEventListener('click', (event) => { makeTabSomething(event.target,'selected') });
+    newdiv.addEventListener('pointerover', (event) => { makeTabSomething(event.target,'hovered'); });
 
     const newButton = document.createElement('button');
     const addTabInput = document.querySelector('.addTabInput');
     let value;
-    if (inputvalue==true){
+    if (inputvalue == true) {
         value = addTabInput.value;
         removeTabInput();
-    }else{
+    } else {
         value = inputvalue;
     }
     newButton.classList.add('removeTabButton');
-    newp.textContent = value;
-    newp.appendChild(newButton);
-    menu.insertBefore(newp, plustab);
+    newButton.addEventListener('click',()=>{removeTab(newdiv); removeOneItemFromStorage("tabList",value)});
+    newButton.innerHTML = `<span class="material-symbols-outlined minusbutton">remove</span>`;
+    newp2.textContent=value;
+    newp2.classList.add('tab');
+    newdiv.appendChild(newp2);
+    newdiv.appendChild(newButton);
+    menu.insertBefore(newdiv, plustab);
     if (save == true) {
         saveToStorage("tabList", value);
     }

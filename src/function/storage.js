@@ -10,6 +10,18 @@ function saveToStorage(name, value) {
         localStorage.setItem(name, data);
 }
 
+// item 하나만 지우는 함수
+function removeOneItemFromStorage(name,target){
+    let data = getFromStorage(name);
+    
+    data = data.filter((element)=> element != target);
+    if (data!=undefined){
+        localStorage.setItem(name,data);
+    }else{
+        removeitemFromStorage(name);
+    }
+}
+
 // name에 맞는 string있으면 배열로 바꿔서 리턴 없으면 null
 function getFromStorage(name) {
     return localStorage.getItem(name) ? localStorage.getItem(name).split(",") : null;
@@ -25,4 +37,4 @@ function clearStorage(){
     return localStorage.clear();
 }
 
-export { saveToStorage, getFromStorage, removeitemFromStorage, clearStorage }
+export { saveToStorage, getFromStorage, removeitemFromStorage, removeOneItemFromStorage}

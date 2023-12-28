@@ -16,7 +16,6 @@ const Homepage = (function(){
     const plustab = document.querySelector('#plustab');
     const cleartab = document.querySelector('#clearTab');
     const tabObjectList = getFromStorage("tabList");
-    const menu = document.querySelector('menu');
     const openFormButton =document.querySelector('#openForm');
 
     mylogo.classList.add('homelogo');
@@ -25,8 +24,12 @@ const Homepage = (function(){
     plustab.addEventListener("click",checktab);
     cleartab.addEventListener("click",clearTab);
     openFormButton.onclick=()=>{openForm()};
-
+    
+    addTab(false,"TOTAL");
+    const removeTabButton = document.querySelector('.removeTabButton');
+    removeTabButton.remove();
+    
     if (tabObjectList!=null){
-        Array.from(tabObjectList).map((value)=>{console.log(value);addTab(false,value);});
+        Array.from(tabObjectList).map((value)=>{addTab(false,value);});
     }
 })();

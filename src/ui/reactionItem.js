@@ -1,11 +1,10 @@
-function makeTabSelected(element){
-    const tabList = document.querySelectorAll('.tab');
+function makeTabSomething(element,name){
+    const tabList = document.querySelectorAll(`.${name}`);
 
-    console.log(element.target);
-    if (element.classList.contains('removeTabButton')){return;}
+    if (!element.classList.contains("tab")){return;}
 
-    tabList.forEach((value)=>value.classList.contains('selected')?value.classList.remove('selected'):null);
-    element.classList.add('selected');
+    tabList.forEach((value)=>value.classList.contains(name)?value.classList.remove(name):null);
+    element.classList.add(name);
 }
 
-export {makeTabSelected}
+export {makeTabSomething}
