@@ -1,10 +1,10 @@
-function makeTabSomething(element,name){
-    const tabList = document.querySelectorAll(`.${name}`);
+function makeThatSomething(element,name,container){
+    const List = document.querySelectorAll(`.${name}`);
 
-    if (!element.classList.contains("tab")){return;}
+    if (!element.classList.contains(container)){return;}
 
-    tabList.forEach((value)=>value.classList.contains(name)?value.classList.remove(name):null);
+    List.forEach((value)=>value.classList.contains(name)?value.classList.remove(name):null);
     element.classList.add(name);
 }
 
-export {makeTabSomething}
+export {makeThatSomething}

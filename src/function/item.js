@@ -1,19 +1,13 @@
-function todo (title,file,description,date,priority){
-    return {title, file, description, date, priority};
+// event가 발생되면 object로 만드는 함수
+function maketodo (){
+    const nameSelector = document.querySelector('#nameSelector').value;
+    const imageSelector = document.querySelector('#imageSelectorLabel').attributes.value.value;
+    const descriptionSelector = document.querySelector('#descriptionSelector').value;
+    const typeSelector = document.querySelector('#setType').value;
+    const prioritySelector = document.querySelector('.selectedPriority').id;
+    const dateSelector= document.querySelector('#dateSelector').value;
+
+    return {title:nameSelector, file: imageSelector, description:descriptionSelector, date:dateSelector, priority:prioritySelector,type:typeSelector};
 }
 
-function tab (title){
-    return {title}
-}
-
-function additem(title,file=false,description=false,date=false,priority=false,type){
-    let newitem;
-    if (type=="todoitem"){
-        newitem = todo(title,file,description,date,priority);
-    }else{
-        newitem = tab(title);
-    }
-    return newitem;
-}
-
-export {additem}
+export {maketodo}

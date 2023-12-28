@@ -8,17 +8,53 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <dialog>
-        <p></p>
-        <form method="dialog">
-            <button>Add</button>
-            <button>Cancel</button>
-        </form>
+        <fieldset>
+            <legend>fill out detail!</legend>
+            <form method="dialog" class="addTabPopUp">
+                <div><label for="nameSelector">Name</label>
+                <input type="text" placeholder="name" id="nameSelector" required></div>
+                
+                <div><label for="imageSelector" id="imageSelectorLabel">Image</label>
+                <input type="file" id="imageSelector" required accept="image/*"></div>
+                
+                <div><label for="descriptionSelector">Description</label>
+                <textarea placeholder="description" name="description" id="descriptionSelector" required rows="5"></textarea></div>
+                
+                <div><label for="dateSelector">Date</label>
+                <input type="date" id="dateSelector" required multiple></div>
+                
+                <div class="setTypeContainer">
+                    <label for="setType">Type</label>
+                    <input type="search" id="setType" name="type" placeholder="type" required>
+                </div>
+                
+                <div class="setPriorityContainer">
+                    <label>Priority</label>
+                    <div class="setPriority">
+                        <label id="high" for="highPriority" class="highPriority Priority selectedPriority">high</label>
+                        <input type="radio" name="priority" id="highPriority" value="high" checked>
+                        <label id="middle" for="middlePriority" class="middlePriority Priority">middle</label>
+                        <input type="radio" name="priority" id="middlePriority" value="middle">
+                        <label id="low" for="lowPriority" class="lowPriority Priority">low</label>
+                        <input type="radio" name="priority" id="lowPriority" value="low">
+                    </div>
+                </div>
+                
+                <div id="buttonDialog">
+                    <button class="symbolButton" id="CancelForm" type="button">Cancel</button>
+                    <button class="symbolButton" id="SubmitForm">Add DRAMA</button>
+                </div>
+
+            </form>
+        </fieldset>
     </dialog>
     <header>
         <h1></h1>
@@ -34,16 +70,15 @@
     <main>
         <menu>
             <p id="plustab"><span class="material-symbols-outlined">
-                add
-            </span></p>
+                    add
+                </span></p>
             <p id="clearTab">
                 <span class="material-symbols-outlined">
                     delete_forever
-                    </span>
+                </span>
             </p>
         </menu>
         <div id="content">
-            <div class="contentitem"></div>
         </div>
     </main>
     <footer>

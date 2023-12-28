@@ -18,4 +18,14 @@ function removeTab(element){
     element.remove();
 }
 
-export {removeTabInput, clearTab, removeTab};
+function clearContent(){
+    const content = document.querySelector('#content');
+    content.innerHTML='';
+}
+
+function removeForm(){
+    const dialog = document.querySelector('dialog');
+    dialog.close();
+}
+
+export {removeTabInput, clearTab, removeTab, clearContent, removeForm};
