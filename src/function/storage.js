@@ -40,9 +40,4 @@ function removeitemFromStorage(name) {
     localStorage.removeItem(name);
 }
 
-// 모든 localStorage clear
-function clearStorage() {
-    return localStorage.clear();
-}
-
 export { saveToStorage, getFromStorage, removeitemFromStorage, removeOneItemFromStorage }
