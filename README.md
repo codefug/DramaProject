@@ -111,19 +111,29 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
     </ul>
     <li>tabaction</li>
         <ul>
-            <li></li>
-            <li></li>
+            <li>+라는 기본 tab을 기준으로 그 전에 tab을 더하는 방식으로 진행된다.</li>
+            <li>
+            document.insertBefore() 함수를 이용하여 menu라는 div안에서 + 기본 tab이전에 input을 형성하게 된다.
+            </li>
+            <li>
+            input이 활성화되어 있을 때 click이나 enter를 누르게 되면 두가지 경우가 발생한다.
+            <ul>
+            <li>input이 비어있다면 input에 focus가 이동된다.</li>
+            <li>input이 채워져 있다면 tab이 형성된다.</li>
+            </ul>
+            <li>확장성을 위해 addTab이라는 초기화면에서 쓸 storage에서 value를 가져와서 tab을 만들거나 새로 만들 때 입력받은 name으로 tab을 만드는 함수를 하나가 될수 있도록 설계한다.</li>
+            </li>
         </ul>
-    <li></li>
+    <li>todo card</li>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>click된 tab을 기준(초기화면에서는 total tab을 기본으로 클릭한 것으로 간주된다.)으로 해당 type을 가진 todocard를 생성하는 함수인 sort로 관리된다.</li>
+            <li>todocard를 만드는 함수에는 DOM처리로 생성하는 것과 함께 remove button에 함수를 추가하게 되는데 이 버튼을 누르면 storage함수와 연동되어 storage에서 값을 삭제하면서 화면에서도 삭제한다.</li>
         </ul>
-    <li></li>
+    <li>form</li>
         <ul>
-            <li></li>
-            <li></li>
+            <li>form 설정은 dialog라는 html 요소로 생성된다.</li>
+            <li>dialog를 js로 modal방식으로 열면 dialog안의 요소들을 볼 수 있다.</li>
+            <li>file selector에서 file을 선택하면 해당 file을 FileReader라는 object을 이용하여 onload event에 event.target.result안에 있는 url을 꺼내서 file label background image에 적용시킨다.</li>
         </ul>
 </ol>
 

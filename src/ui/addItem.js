@@ -23,7 +23,7 @@ function addTabInput() {
 }
 
 // save = localstorage에 저장여부, inputvalue = input의 정보를 사용하는지 여부
-function addTab(save = false, inputvalue = false) {
+function addTab(save, inputvalue) {
     const menu = document.querySelector('menu');
     const plustab = document.querySelector('#plustab');
     const newdiv = document.createElement('div');
