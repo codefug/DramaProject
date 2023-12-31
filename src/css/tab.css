@@ -1,54 +1,54 @@
-menu *::selection{
-    background-color: black;
+menu *::selection {
+  background-color: black;
 }
-menu p:hover{
-    cursor: pointer;
+menu p:hover {
+  cursor: pointer;
 }
-.addTabInput{
-    appearance: none;
-    width:150px;
-    border:0;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-sizing: border-box;
-    border: 1px groove white;
-    background-color: var(--subcolor);
-    font-family: Myfont;
-    letter-spacing: 0.1rem;
+.addTabInput {
+  appearance: none;
+  width: 150px;
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px groove white;
+  background-color: var(--subcolor);
+  font-family: Myfont;
+  letter-spacing: 0.1rem;
 }
-.addTabButton{
-    display:none;
+.addTabButton {
+  display: none;
 }
 
-.hovered{
-    text-decoration: var(--subcolor) underline;
-    color:white;
+.hovered {
+  text-decoration: var(--subcolor) underline;
+  color: white;
 }
-.selected{
-    color:red;
+.selected {
+  color: red;
 }
-.selected:hover{
-    color:red;
+.selected:hover {
+  color: red;
 }
-.removeTabButton{
-    background: none;
-    border: none;
-    height:1.5rem;
+.removeTabButton {
+  background: none;
+  border: none;
+  height: 1.5rem;
 }
-.tab{
-    font-size: 1.5rem;
-    display: inline-block;
+.tab {
+  font-size: 1.5rem;
+  display: inline-block;
 }
-.tabcomponent{
-    height:fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.tabcomponent {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.minusbutton{
-    font-size: 1rem;
+.minusbutton {
+  font-size: 1rem;
 }
-.minusbutton:hover{
-    cursor: pointer;
+.minusbutton:hover {
+  cursor: pointer;
 }

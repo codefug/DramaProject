@@ -30,6 +30,7 @@
 </details>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 ![Alt text](image.png)
@@ -38,8 +39,7 @@ window.onload event를 이용한 loading 화면
 ![Alt text](image-1.png)
 storage에 아무것도 포함되지 않은 홈 화면
 
-![Alt text](image-2.png)
-+버튼을 이용해서 total 이외에도 tab을 생성할 수 있습니다.
+![Alt text](image-2.png) +버튼을 이용해서 total 이외에도 tab을 생성할 수 있습니다.
 
 ![Alt text](image-3.png)
 enter혹은 +버튼을 한번 더 누르면 tab 생성이 완료됩니다.
@@ -69,17 +69,18 @@ card에는 priority 옆에 remove라는 버튼이 있습니다. 해당 카드만
 
 ### Built With
 
-* ![JavaScript][JavaScript.url]
-* ![HTML5][HTML5.url]
-* ![CSS3][CSS3.url]
-* ![Webpack][Webpack.url]
-* ![NPM][npm.url]
-  
+- ![JavaScript][JavaScript.url]
+- ![HTML5][HTML5.url]
+- ![CSS3][CSS3.url]
+- ![Webpack][Webpack.url]
+- ![NPM][npm.url]
+
 <p align="right">
 (<a href="#readme-top">back to top</a>)
 </p>
 
 <!-- CONTACT -->
+
 ## Contact
 
 codefug
@@ -91,7 +92,9 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
 </p>
 
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
+
 <ol>
     <li>이번 프로젝트의 중점은 localstorage 지식 습득과 함수형 프로그래밍에 대해서, 객체 지향성을 생각하면서 효율적으로 확장성 있게 구현하는 것이다.</li>
     <br>
@@ -143,17 +146,18 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
 
 todo > 하나의 객체이다.
 title, description, dueDate, priority, notes or checklist가 있는게 좋다.
-list는 각각 projects와 todo리스트가  따로 있었으면 좋겠고 default project가 처음 열면 있었으면 좋겠다. (모든 todo가 있는)
+list는 각각 projects와 todo리스트가 따로 있었으면 좋겠고 default project가 처음 열면 있었으면 좋겠다. (모든 todo가 있는)
 새로운 프로젝트를 더할 수 있고 어떤 프로젝트가 todo들이 있을지를 정한다.
 application logic을 따로 놓는다. (function folder)
 view all projects, view all todos in each project, expand a single todo to see edit its details, delete a todo
 https://github.com/date-fns/date-fns date time library
 https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API web storage api
-  데이터가 없어도 crash되지 않게 하라
-  DevTool을 이용해서 data를 inspect할 수 있다. Application tab>Storage>Local Storage에 있음
+데이터가 없어도 crash되지 않게 하라
+DevTool을 이용해서 data를 inspect할 수 있다. Application tab>Storage>Local Storage에 있음
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [JavaScript.url]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 [HTML5.url]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
 [CSS3.url]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white

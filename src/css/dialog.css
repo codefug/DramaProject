@@ -1,99 +1,102 @@
-dialog{
-    border-radius: 1.5rem;
-    background-color: black;
-    color:white;
-    border: 1px solid var(--subcolor)
+dialog {
+  border-radius: 1.5rem;
+  background-color: black;
+  color: white;
+  border: 1px solid var(--subcolor);
 }
-input::selection,textarea::selection{
-    background-color: yellow;
+input::selection,
+textarea::selection {
+  background-color: yellow;
 }
-dialog::backdrop{
-    background-color: rgba(0, 0, 0, 0.507);
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.507);
 }
-fieldset{
-    border-radius: 1.5rem;
+fieldset {
+  border-radius: 1.5rem;
 }
-.addTabPopUp{
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width:30rem;
-    height:50rem;
-    padding-inline: 1rem;
+.addTabPopUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30rem;
+  height: 50rem;
+  padding-inline: 1rem;
 }
-input{
-    appearance: none;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    padding-inline: 1rem;
-    border:1px solid var(--subcolor);
+input {
+  appearance: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+  border: 1px solid var(--subcolor);
 }
-input:invalid,textarea:invalid{
-    border:3px solid red;
-    box-sizing: border-box;
+input:invalid,
+textarea:invalid {
+  border: 3px solid red;
+  box-sizing: border-box;
 }
-input:valid,textarea:valid{
-    border:3px solid lightgreen;
-    box-sizing: border-box;
+input:valid,
+textarea:valid {
+  border: 3px solid lightgreen;
+  box-sizing: border-box;
 }
-input[type="file"]{
-    display: none;
+input[type="file"] {
+  display: none;
 }
-label[for="imageSelector"]{
-    display: block;
-    color:black;
-    appearance: none;
-    border-radius: 1rem;
-    font-size: 1.5rem;
-    padding-inline: 1rem;
-    border:1px solid var(--subcolor);
-    height:10rem;
-    background-color: white;
+label[for="imageSelector"] {
+  display: block;
+  color: black;
+  appearance: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+  border: 1px solid var(--subcolor);
+  height: 10rem;
+  background-color: white;
 }
-textarea{
-    resize: none;
-    border-radius: 1rem;
-    font-size: 1rem;
-    padding: 1rem;
-    font-family: inherit;
-    letter-spacing: 0.2rem;
-    width: 100%;
-    box-sizing: border-box;
+textarea {
+  resize: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+  font-family: inherit;
+  letter-spacing: 0.2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
-.setPriorityContainer{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
+.setPriorityContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.setPriority{
-    display:flex;
-    gap:2rem;
-    align-items: center;
+.setPriority {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
-input[name="priority"]{
-    display: none;
+input[name="priority"] {
+  display: none;
 }
-#buttonDialog{
-    display: flex;
+#buttonDialog {
+  display: flex;
 }
-#buttonDialog>*{
-    flex:1;
-    margin:0rem 2rem;
-    border-radius: 1rem;
-    font-family: inherit;
-    font-size: 1.5rem;
-    letter-spacing: 0.3rem;
-    color:white;
+#buttonDialog > * {
+  flex: 1;
+  margin: 0rem 2rem;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  color: white;
 }
-#buttonDialog>*:hover{
-    color:var(--subcolor);
+#buttonDialog > *:hover {
+  color: var(--subcolor);
 }
-label{
-    font-size:1.5rem;
+label {
+  font-size: 1.5rem;
 }
-label:hover{
-    cursor: pointer;
+label:hover {
+  cursor: pointer;
 }
-.selectedPriority{
-    color:red;
+.selectedPriority {
+  color: red;
 }

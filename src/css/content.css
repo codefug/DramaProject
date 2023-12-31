@@ -1,39 +1,39 @@
-#content{
-    flex:1;
-    display:grid;
-    grid-template: repeat(auto-fill,360px) / repeat(auto-fill,360px);
-    padding-inline:3vw;
-    gap:3vw;
-    padding-bottom: 10vh;
+#content {
+  flex: 1;
+  display: grid;
+  grid-template: repeat(auto-fill, 360px) / repeat(auto-fill, 360px);
+  padding-inline: 3vw;
+  gap: 3vw;
+  padding-bottom: 10vh;
 }
-.contentItem{
-    background-color: black;
-    border:1px solid var(--subcolor);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contentItem {
+  background-color: black;
+  border: 1px solid var(--subcolor);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.contentItemImage{
-    width:300px;
-    height:200px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.contentItemImage {
+  width: 300px;
+  height: 200px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.contentDescription{
-    border:1px solid black;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    height:100px;
-    width: 300px;
-    overflow: auto;
+.contentDescription {
+  border: 1px solid black;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 100px;
+  width: 300px;
+  overflow: auto;
 }
-.high{
-    background-color: lightgreen;
+.high {
+  background-color: lightgreen;
 }
-.middle{
-    background-color: yellow;
+.middle {
+  background-color: yellow;
 }
-.low{
-    background-color: red;
+.low {
+  background-color: red;
 }
